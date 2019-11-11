@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if UIApplication.shared.applicationState == .background {
+            // when launched app from background fetch
+        } else if UIApplication.shared.applicationState == .inactive {
+            // when launched app from clicking icon
+        }
     }
 
 
