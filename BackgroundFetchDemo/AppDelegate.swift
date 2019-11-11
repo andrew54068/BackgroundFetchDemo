@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        application.setMinimumBackgroundFetchInterval(60 * 60 * 12)
+    }
+    
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        // update badge number etc.
+        completionHandler(.newData)
+    }
 
     // MARK: UISceneSession Lifecycle
 
