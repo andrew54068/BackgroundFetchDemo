@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate {
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
-        application.setMinimumBackgroundFetchInterval(60 * 60 * 12)
+        application.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
     }
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
