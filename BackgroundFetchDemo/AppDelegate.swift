@@ -18,6 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate {
         return true
     }
     
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        
+    }
+    
+    @available(iOS 13.0, *)
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        
+    }
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         application.setMinimumBackgroundFetchInterval(60 * 60 * 12)
     }
